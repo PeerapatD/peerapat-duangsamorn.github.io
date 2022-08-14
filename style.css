@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.background {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(32, 32, 32);
+  z-index: -99;
+}
+
+.background .container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 3px solid black; */
+  margin: 0 160px;
+  background-color: rgb(32, 32, 32);
+}
+
+.background .top-line {
+  position: absolute;
+  width: 245px;
+  height: 10px;
+  background-color: rgb(247, 247, 131);
+  background-image: linear-gradient(to right, rgb(247, 247, 131), rgb(43, 43, 32));
+}
+
+.background .top-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotateX(180deg);
+  border-top: 10px solid rgb(32, 32, 32);
+  border-left: 80px solid transparent;
+}
+
+.background .right-line {
+  z-index: 3;
+  position: absolute;
+  width: 10px;
+  height: 245px;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(247, 247, 131);
+  background-image: linear-gradient(to top, rgb(247, 247, 131), rgb(43, 43, 32));
+}
+
+.background .right-line::after {
+  content: '';
+  position: absolute;
+  top: 33px;
+  left: -35px;
+  transform: rotate(270deg);
+  border-bottom: 10px solid transparent;
+  border-right: 80px solid rgb(32, 32, 32);
+}
+
+.background .bottom-line {
+  position: absolute;
+  width: 245px;
+  height: 10px;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(247, 247, 131);
+  background-image: linear-gradient(to left, rgb(247, 247, 131), rgb(43, 43, 32));
+}
+
+.background .bottom-line::after {
+  content: '';
+  position: absolute;
+  top: -35px;
+  left: 35px;
+  transform: rotate(270deg);
+  z-index: 5;
+  border-top: 80px solid rgb(32, 32, 32);
+  border-left: 10px solid transparent;
+}
+
+.background .left-line {
+  display: flexbox;
+  width: 10px;
+  height: 245px;
+  background-color: rgb(247, 247, 131);
+  background-image: linear-gradient(to bottom, rgb(247, 247, 131), rgb(43, 43, 32));
+}
+
+.background .left-line::after {
+  content: '';
+  position: absolute;
+  top: 165px;
+  left: 0;
+  transform: rotateY(180deg);
+  z-index: 5;
+  border-top: 80px solid transparent;
+  border-left: 10px solid rgb(32, 32, 32);
+}
+
+/* main section */
+
+main {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  margin: 0 auto;
+}
+
+.content {
+  display: flexbox;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -40px;
+  /* background-color: rgb(154, 185, 212); */
+  margin: 40px 180px;
+  padding: 80px 20px;
+}
+
+.content .content-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid whitesmoke;
+  background-color: rgba(255, 166, 0, 0.4); */
+}
+
+.content .left-content {
+  width: 30%;
+  height: 100%;
+  color: white;
+  background-color: rgb(32, 32, 32); 
+}
+
+.content .left-content .left-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(250, 235, 215, 0.4); */
+}
+
+.left-content .left-top {
+  margin-top: -30px;
+  margin-bottom: -40px;
+}
+
+.left-content .left-top h1 {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding-bottom: 20px;
+}
+
+.left-content .left-top h2 {
+  width: fit-content;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(216, 216, 56);
+}
+
+.left-content .about {
+  font-size: 1.1rem;
+}
+
+hr {
+  margin-top: -20px;
+  margin-bottom: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  justify-items: center;
+}
+
+.left-content .contact {
+  display: flex;
+  width: 100%;
+  /* height: 20%; */
+  /* background-color: rgb(175, 154, 126); */
+
+}
+
+.contact .contact-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  margin-bottom: -90px;
+  /* background-color: rgb(81, 250, 250, 0.4); */
+}
+
+.contact h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 20px;
+  color:  rgb(216, 216, 56);
+  letter-spacing: 1px;
+}
+
+.contact label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact .phone {
+  padding-bottom: 15px;
+}
+
+
+.vertical {
+  width: 1px;
+  height: 85%;
+  margin: auto 60px;
+  background-color: rgb(255, 255, 255, 0.4);
+}
+
+.content .right-content {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  /* background-color: whitesmoke; */
+}
+
+.right-content .container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  /* background-color: rgb(160, 70, 245); */
+}
+
+.right-top {
+  display: flex;
+  height: 20%;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgb(32, 32, 32);
+}
+
+.project {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.project .project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  /* border: 5px solid red; */
+  /* background-color: yellow; */
+  z-index: 4;
+}
+
+.project .project1 {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  cursor: pointer;
+}
+
+.project1 .project1-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.project1 .work {
+  height: 100%;
+  width: 40%;
+  /* background-color: aliceblue; */
+}
+
+.project1 .template {
+  height: 100%;
+  width: 40%;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  background-color: aliceblue;
+}
+
+.project1 .template p {
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  background-color: rgb(105, 105, 105);
+}
+
+.project1-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.project1-info a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(216, 216, 56);
+  font-weight: 800;
+}
+
+.project .project2 {
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+
+.project img {
+  height: 100%;
+  width: 100%;
+  border: 3px solid rgb(247, 247, 131);
+}
+
+.project2 .project2-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+.project2 .template {
+  height: 100%;
+  width: 45%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+  background-color: aliceblue;
+}
+
+.project2 .template p {
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+  background-color: rgb(105, 105, 105);
+}
+
+.project2 .work {
+  height: 100%;
+  width: 45%;
+  background-color: aliceblue;
+}
+
+.project2-info {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  align-items: flex-end;
+  justify-content: space-between;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+  /* background-color: rgb(80, 141, 107); */
+}
+
+.project2-info a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color:rgb(216, 216, 56);
+  font-weight: 800;
+}
